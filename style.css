@@ -1,0 +1,56 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: calc(.5em + 1vw);
+  background-color: #eee;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: calc(100vw - 200px);
+  height: calc(100vh - 200px);
+  background-color: steelblue;
+}
+
+.eye {
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.pupil {
+  background-color: #000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.eye:first-child {
+  margin-left: -200px;
+}
+
+.eye:last-child {
+  margin-left: 200px;
+}
